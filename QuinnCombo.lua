@@ -256,7 +256,8 @@ function QuinnCombo:Combo()
     end
   else
   self.Spell_E:Cast(target)
-    
+end
+
   -- Auto R
 --  if self.cfg.combo.autor and self.Spell_R:IsReady() and myHero.mana >= self.Spell_R:Mana() then
   
