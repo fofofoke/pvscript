@@ -237,10 +237,10 @@ end
 function QuinnCombo:Combo()
   
   -- Cast Q for target
-  if TargetHaveBuff("buffname") or myhero:CanUseSpell(_E) == ready then
-   end
-  else
-  self.Spell_Q:Cast(target)
+  if TargetHaveBuff("quinnw") or (myHero:CanUseSpell(_E) == ready) then return
+		else self.Spell_Q:Cast(target)
+	end
+
   
   -- Auto W
 --  if self.cfg.combo.autow then
@@ -252,12 +252,12 @@ function QuinnCombo:Combo()
 --  end
   
   -- Cast E for target
-  if TargetHaveBuff("buffname") then
-    end
-  else
-  self.Spell_E:Cast(target)
-end
+  if TargetHaveBuff("quinnw") then return
+		else self.Spell_E:Cast(target)
+	end
 
+	
+    
   -- Auto R
 --  if self.cfg.combo.autor and self.Spell_R:IsReady() and myHero.mana >= self.Spell_R:Mana() then
   
