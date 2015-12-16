@@ -87,7 +87,7 @@ end
 function QuinnCombo:Config()
 
   -- Set Spell with SimpleLib
-  self.Spell_Q = _Spell({Slot = _Q, DamageName = "Q", Range = 1025, Width = 80, Delay = 0.125, Speed = 2000, Collision = true, Aoe = true, Type = SPELL_TYPE.LINEAR})
+  self.Spell_Q = _Spell({Slot = _Q, DamageName = "Q", Range = 1025, Width = 80, Delay = 0.125, Speed = 1800, Collision = true, Aoe = true, Type = SPELL_TYPE.LINEAR})
   self.Spell_Q:SetAccuracy(70)
   self.Spell_Q:AddDraw({Enable = true, Color = {255,0,125,255}})
   
@@ -235,9 +235,10 @@ function QuinnCombo:OnDeleteObj(obj)
 end
 
 function QuinnCombo:Combo()
-  
+	
+	
   -- Cast Q for target
-  if TargetHaveBuff("quinnw") or (myHero:CanUseSpell(_E) == ready) then return
+  if TargetHaveBuff("quinnw", target) or (myHero:CanUseSpell(_E) == ready) then return
 		else self.Spell_Q:Cast(target)
 	end
 
@@ -252,7 +253,7 @@ function QuinnCombo:Combo()
 --  end
   
   -- Cast E for target
-  if TargetHaveBuff("quinnw") then return
+  if TargetHaveBuff("quinnw", target) then return
 		else self.Spell_E:Cast(target)
 	end
 
