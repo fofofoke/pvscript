@@ -87,7 +87,7 @@ end
 function QuinnCombo:Config()
 
   -- Set Spell with SimpleLib
-  self.Spell_Q = _Spell({Slot = _Q, DamageName = "Q", Range = 1025, Width = 80, Delay = 0.125, Speed = 1800, Collision = true, Aoe = true, Type = SPELL_TYPE.LINEAR})
+  self.Spell_Q = _Spell({Slot = _Q, DamageName = "Q", Range = 1025, Width = 80, Delay = 0.5, Speed = 1200, Collision = true, Aoe = true, Type = SPELL_TYPE.LINEAR})
   self.Spell_Q:SetAccuracy(70)
   self.Spell_Q:AddDraw({Enable = true, Color = {255,0,125,255}})
   
